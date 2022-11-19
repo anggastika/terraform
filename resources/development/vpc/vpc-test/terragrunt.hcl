@@ -8,5 +8,5 @@ include {
 
 inputs = { 
   subnet_name = "subnet-vpc-test"
-  subnet_ip_cidr_range = "10.2.0.0/14"
+  subnet_ip_cidr_range = "10.2.0.0/16"
 }
