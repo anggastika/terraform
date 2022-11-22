@@ -1,3 +1,4 @@
+# INSTANCES
 terraform {
   source = "../../../../module//instances"
 }
@@ -12,4 +13,18 @@ inputs = {
   image = "ubuntu-os-cloud/ubuntu-2004-focal-v20221018"
   network = "vpc-test"
   subnetwork = "subnet-vpc-test"
+}
+
+# VPC NETWORK
+terraform {
+  source = "../../../../module//vpc"
+}
+
+include {
+  path = find_in_parent_folders()
+}
+
+inputs = { 
+  subnet_name = "subnet-vpc-keren"
+  subnet_ip_cidr_range = "10.2.0.0/16"
 }
