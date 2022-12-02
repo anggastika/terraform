@@ -26,7 +26,7 @@ resource "google_container_cluster" "default" {
 resource "google_container_node_pool" "default" {
   name       = "${var.name}-node-pool"
   cluster    = google_container_cluster.default.name
-  node_count = 1
+  node_count = var.node_count
 
   node_config {
     preemptible  = false
