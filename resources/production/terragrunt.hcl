@@ -10,7 +10,7 @@ remote_state {
 inputs = {
     region               = "asia-southeast2"
     zone                 = "asia-southeast2-a"
-    project              = "agile-fortress-366903"
+    project              = "thinking-league-367003"
     credentials          = "/home/adhithia/gcp-production.json"
     name = "${basename(get_terragrunt_dir())}"
 }
